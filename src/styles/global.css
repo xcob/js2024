@@ -19,3 +19,48 @@ pre {
 pre .language-id {
   display: none;
 }
+
+.game-list{
+	display: flex;
+	flex-flow: row wrap;
+	scroll-behavior: smooth;
+}
+
+.game-list div{
+	position: relative;
+	width: 300px;
+	height: 320px;
+	margin: 10px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	border-radius: 6px;
+}
+
+.game-list h3{
+	font-size: 22px;
+	padding: 5px;
+	margin-bottom: 5px;
+	word-wrap: normal;
+}
+
+.game-list p {
+	margin-bottom: 5px;
+}
+
+.game-list img{
+	width: 300px;
+	margin-bottom: 10px;
+}
+
+.game-list .savings{
+	color: #fff;
+	background-color: red;
+	padding: 3px;
+	position: absolute;
+	border-radius: 6px;
+	right: -5px;
+	top: -5px;
+}
+
+.game-list .original-price,.game-list .sale-price, .game-list a {
+	padding: 5px;
+}

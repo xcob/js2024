@@ -1,0 +1,36 @@
+---
+import Container from '../core/Container.astro';
+
+  const response = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=25`);
+  const data = await response.json();
+  //console.log(data);
+
+
+  // if (data.dealID) {
+  //   return {
+  //     title: data.title,
+  //     normalPrice: data.normalPrice,
+  //     salePrice: data.salePrice,
+  //     storeID: data.storeID,
+  //     steamAppID: data.steamAppID,
+  //     thumb: data.thumb,
+  //   };
+  // }
+
+---
+
+<Container>
+  <div class="game-list" id="deals" >
+    {data.map((data) => 
+    <div class="">
+      <img src={data.thumb} alt={data.title}/>
+       <h3>{data.title}</h3>
+       <p> <span class="original-price">$<del>{data.normalPrice}</del></span>
+       <span class="sale-price">$<span>{data.salePrice}</span></span>
+       </p> 
+      <a href={`https://www.cheapshark.com/search?steamAppID=${data.steamAppID}`} target="_blank" rel="noopener noreferrer">See Deal</a> 
+       <span class="savings">{data.savings.slice(0,2)}% OFF</span>
+    </div>
+     )}
+  </div>
+</Container>
