@@ -28,7 +28,7 @@ import Container from '../core/Container.astro';
        <p> <span class="original-price">$<del>{data.normalPrice}</del></span>
        <span class="sale-price">$<span>{data.salePrice}</span></span>
        </p> 
-      <a href={`https://www.cheapshark.com/search?steamAppID=${data.steamAppID}`} target="_blank" rel="noopener noreferrer">See Deal</a> 
+      <a href={`https://www.cheapshark.com/redirect?dealID=${data.dealID}`} target="_blank" rel="noopener noreferrer">See Deal</a> 
        <span class="savings">{data.savings.slice(0,2)}% OFF</span>
     </div>
      )}
